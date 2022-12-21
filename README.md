@@ -1,4 +1,4 @@
-# Hotel Booking Analysis
+# Bike Sharing Demand Prediction
 
 ## Table of Content
 
