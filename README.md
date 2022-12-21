@@ -5,53 +5,65 @@
 1. Introduction
 2. Problem Statement
 3. Dataset Information
-4.  Conclusion
+4. Conclusion
 *****
 1. Introduction
-
-  Bike sharing system is an innovative transportation strategy that provides individuals with bikes for their common use on a short-term basis for a price or for free.   Over the last few decades, there has been a significant increase in the popularity of bike-sharing systems all over the world. This is because it is an                 environmentally sustainable, convenient and economical way of improving urban mobility. In addition to this, this system also helps to promote healthier habits among   its users and reduce fuel consumption.
-The goals of this project are:
-    * Understand the trends in the data and identify key factors affecting the hourly demand for rental bikes.
-    * Build an appropriate regression model to forecast the number of rental bikes required per hour.
-
+This data set contains booking information for a city hotel and a resort hotel, and includes information such as when the booking was made, length of stay, the number of adults, children, and/or babies, and the number of available parking spaces, among other things.
+  
 2. Problem Statement
 
-  With the growing demand and user base for bike-sharing system, providing the city with a stable supply of rental bikes could eventually become a challenging task. The success of bike-sharing system relies in ensuring that the quality of facilities provided, meets the needs and expectations of the users. Therefore, it is important to ensure that rental bikes are available and accessible to the users at right time ,as it reduces the waiting time. Forecasting the number of bikes required and identifying the key factors that influence the demand for rental bikes can greatly help in managing the bike-sharing system.
+Our main objective is to perform EDA on the given dataset and draw useful conclusions about general trends in hotel bookings and how factors governing hotel bookings interact with each other.
 
 3.  Dataset information
 
-  Dataset used in this project is the Seoul Bike Share program data.This dataset contains information about the total count of rented bikes at each hour, as well as the date of observation and meteorological information (Humidity, Snowfall, Rainfall, Temperature Season, and so on) for that hour. The observations in the dataset  were recorded during a span of 365 days, from December 2017 to November 2018.
+We are given a hotel bookings dataset. This dataset contains booking information for a city hotel and a resort hotel. It contains the following features.
 
-    The Seoul Bike Dataset contains the following information:
-
-        * Date - The date of each observation in the format 'year-month-day'
-        * Hour - Hour of the day
-        * Temperature - Temperature recorded in the city in Celsius (°C).
-        * Humidity - Relative humidity in %
-        * Wind speed - Speed of the wind in m/s
-        * Visibility - measure of distance at which object or light can be clearly discerned in units of 10m
-        * Dew point temperature - Temperature recorded in the beginning of the day in Celsius(°C).
-        * Solar radiation - Intensity of sunlight in MJ/m^2
-        * Rainfall - Amount of rainfall received in mm
-        * Snowfall - Amount of snowfall received in cm
-        * Seasons - Season of the year (Winter, Spring, Summer, Autumn)
-        * Holiday - Whether the day is a Holiday or not (Holiday/No holiday)
-        * Functional Day -Whether the rental service is available (Yes-Functional hours) or not (No-Non functional hours)
-        * Rented Bike count - Count of bikes rented at each hour (target variable)
-      
+    - hotel: Name of hotel ( City or Resort)
+    - is_canceled: Whether the booking is canceled or not (0 for no canceled and 1 for canceled)
+    - lead_time: time (in days) between booking transaction and actual arrival.
+    - arrival_date_year: Year of arrival
+    - arrival_date_month: month of arrival
+    - arrival_date_week_number: week number of arrival date.
+    - arrival_date_day_of_month: Day of month of arrival date
+    - stays_in_weekend_nights: No. of weekend nights spent in a hotel
+    - stays_in_week_nights: No. of weeknights spent in a hotel
+    - adults: No. of adults in single booking record.
+    - children: No. of children in single booking record.
+    - babies: No. of babies in single booking record. 
+    - meal: Type of meal chosen 
+    - country: Country of origin of customers (as mentioned by them)
+    - market_segment: What segment via booking was made and for what purpose.
+    - distribution_channel: Via which medium booking was made.
+    - is_repeated_guest: Whether the customer has made any booking before(0 for No and 1 for 
+                         Yes)
+    - previous_cancellations: No. of previous canceled bookings.
+    - previous_bookings_not_canceled: No. of previous non-canceled bookings.
+    - reserved_room_type: Room type reserved by a customer.
+    - assigned_room_type: Room type assigned to the customer.
+    - booking_changes: No. of booking changes done by customers
+    - deposit_type: Type of deposit at the time of making a booking (No deposit/ Refundable/ No refund)
+    - agent: Id of agent for booking
+    - company: Id of the company making a booking
+    - days_in_waiting_list: No. of days on waiting list.
+    - customer_type: Type of customer(Transient, Group, etc.)
+    - adr: Average Daily rate.
+    - required_car_parking_spaces: No. of car parking asked in booking
+    - total_of_special_requests: total no. of special request.
+    - reservation_status: Whether a customer has checked out or canceled,or not showed 
+    - reservation_status_date: Date of making reservation status.
+  dataset have 119390 records and 32 features.
 
 4. Conclusions:
 
-      * Temperature and Hour have a strong correlation with the count of rented bikes.
-      * Dew point temperature is highly positively correlated to the Temperature.
-      * Over the weekend and during holidays, rental bike demand decreases.
-      * There is a significant drop in the number of rented bikes during Winters(Dec-Feb) because it's freezing cold!
-      * The demand for bikes increases during warmer temperatures,which is why there's maximum count of rented bikes during the Summer season.
-      * In all seasons,the peak demands for rental bikes occur on the opening (8-9 AM) and closing times (6-7pm) of offices and institutions.
-      * Elastic net model understand data properly hence show very poor performance with data.
-      * linear regression and lasso and ridge with or without hyperparameter tuning shows very poor performance with the data (all having almost same R2_score)
-      * By using polynomial regression with degree 2, R2_score improve to 0.8 for train data and 0.77 for test data.Model performance is improved as compare to earlier model.
-      * By using DecisionTreeRegressor with GridSearchCV, training R2_score is 0.99 and for test data R2_score is 0.89. Model performance is improved but slightly increase in overfitting.
-      * By using RandomForest with GridSearchCV, training R2_score is 0.93 and test R2_score is 0.99. Model is slightly underfitting.
-      * By using Gradient Boosting without hyperparameter tuning training R2_score 0.89 and test R2_score is 0.90, model is generalized very well.
-      * By using Gradient Boosting with GridSearchCV training R2_score is 0.99 and test R2_score is 0.95 model performance is improved with a accuracy of 0.95.
+      * In the both hotel, most of the customers are no deposite type.
+      * Frequent guest visit both hotel in same proportion, maximum number of new guest visit city hotel.
+      * Most of the visitor who book their room are from aviation industry
+      * travel agent or tour operator are most popular distribution channel.
+      * Maximum number of visitor from Portugal followed by Great Britain and France.
+      * For Portugal and great Britain resort hotel is more popular, from France onwards city hotel is more popular.
+      * Very small amount Aviation people cancel their ticket compare to online TA
+      * BB is the most popular food for both the hotel.
+      * People with night stay 4 or more preferred to book room in resort hotel and less than 4 preferred to book in city hotel.
+      * booking change is increases from January to July and reaches to its maximum value and then decreases to December. 
+      * every four-month waiting time increases to its maximum value
+
