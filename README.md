@@ -39,7 +39,6 @@ The goals of this project are:
       * Rented Bike count - Count of bikes rented at each hour (target variable)
       
 4. Tools and Technologies used
-
     * The programming language used in this project is Python . The following libraries were used for data analysis and data visualization and to build a classifier to predict the price range of mobile phones.
 
     * Pandas : For loading the dataset and performing data wrangling
@@ -48,9 +47,7 @@ The goals of this project are:
     * Statsmodels: For statistical computations
     * Sklearn: For the purpose of analysis,prediction and evaluation.
 
-4. Approach
 4.  Steps involved
-
     * Data Preprocessing : Checked for outliers, incorrect values, missing values, duplicates and performed data type correction.
     * Feature Extraction : Created new columns such as Day, Month, Year, Days_of_week and Weekend from Date column .
     * Exploratory Data Analysis : Performed Univariate, Bivariate, and Multivariate analysis with various graphs and plots to better understand the distribution of features and their relationships.
@@ -60,6 +57,7 @@ The goals of this project are:
     * Implementation of Regression models
     * Hyperparameter tuning
     * Comparison of models
+   
 5. Algorithms used
     * Linear Regression
     * Ridge Regression
