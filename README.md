@@ -4,10 +4,8 @@
 
 1. Introduction
 2. Problem Statement
-3. Dataset Information Tools and Technologies used
-4. Steps involved
-5. Algorithms used
-6.  Conclusion
+3. Dataset Information
+4.  Conclusion
 *****
 1. Introduction
 
@@ -41,51 +39,19 @@ The goals of this project are:
       * Functional Day -Whether the rental service is available (Yes-Functional hours) or not (No-Non functional hours)
       * Rented Bike count - Count of bikes rented at each hour (target variable)
       
-4. Tools and Technologies used
 
-    * The programming language used in this project is Python . The following libraries were used for data analysis and data visualization and to build a classifier to predict the price range of mobile phones.
+4. Conclusions:
 
-    * Pandas : For loading the dataset and performing data wrangling
-    * Matplotlib: For data visualization.
-    * Seaborn: For data visualization
-    * Statsmodels: For statistical computations
-    * Sklearn: For the purpose of analysis,prediction and evaluation.
-
-4.  Steps involved
-
-    * Data Preprocessing : Checked for outliers, incorrect values, missing values, duplicates and performed data type correction.
-    * Feature Extraction : Created new columns such as Day, Month, Year, Days_of_week and Weekend from Date column .
-    * Exploratory Data Analysis : Performed Univariate, Bivariate, and Multivariate analysis with various graphs and plots to better understand the distribution of features and their relationships.
-    * Feature Selection : Checked the VIF value (measure of multicollinearity) and dropped Dew point Temperature and Year which were highly correlated with other independent features.
-    * Feature encoding : The categorical features present in the dataset Seasons, Holiday, Weekend, Functioning Day were dummified.
-    * Feature Scaling : Brought features to a similar range using MinmaxScaler.
-    * Implementation of Regression models
-    * Hyperparameter tuning
-    * Comparison of models
-   
-5. Algorithms used
-
-    * Linear Regression
-    * Ridge Regression
-    * lasso regression
-    * Polynomial Regression
-    * elastic net regularization
-    * Gradient boosting
-    * Decision-tree regression model
-    * Random forest regression model
-
-7. Conclusions:
-
-    * Temperature and Hour have a strong correlation with the count of rented bikes.
-    * Dew point temperature is highly positively correlated to the Temperature.
-    * Over the weekend and during holidays, rental bike demand decreases.
-    * There is a significant drop in the number of rented bikes during Winters(Dec-Feb) because it's freezing cold!
-    * The demand for bikes increases during warmer temperatures,which is why there's maximum count of rented bikes during the Summer season.
-    * In all seasons,the peak demands for rental bikes occur on the opening (8-9 AM) and closing times (6-7pm) of offices and institutions.
-    * Elastic net model understand data properly hence show very poor performance with data.
-    * linear regression and lasso and ridge with or without hyperparameter tuning shows very poor performance with the data (all having almost same R2_score)
-    * By using polynomial regression with degree 2, R2_score improve to 0.8 for train data and 0.77 for test data.Model performance is improved as compare to earlier model.
-    * By using DecisionTreeRegressor with GridSearchCV, training R2_score is 0.99 and for test data R2_score is 0.89. Model performance is improved but slightly increase in overfitting.
-    * By using RandomForest with GridSearchCV, training R2_score is 0.93 and test R2_score is 0.99. Model is slightly underfitting.
-    * By using Gradient Boosting without hyperparameter tuning training R2_score 0.89 and test R2_score is 0.90, model is generalized very well.
-    * By using Gradient Boosting with GridSearchCV training R2_score is 0.99 and test R2_score is 0.95 model performance is improved with a accuracy of 0.95.
+      * Temperature and Hour have a strong correlation with the count of rented bikes.
+      * Dew point temperature is highly positively correlated to the Temperature.
+      * Over the weekend and during holidays, rental bike demand decreases.
+      * There is a significant drop in the number of rented bikes during Winters(Dec-Feb) because it's freezing cold!
+      * The demand for bikes increases during warmer temperatures,which is why there's maximum count of rented bikes during the Summer season.
+      * In all seasons,the peak demands for rental bikes occur on the opening (8-9 AM) and closing times (6-7pm) of offices and institutions.
+      * Elastic net model understand data properly hence show very poor performance with data.
+      * linear regression and lasso and ridge with or without hyperparameter tuning shows very poor performance with the data (all having almost same R2_score)
+      * By using polynomial regression with degree 2, R2_score improve to 0.8 for train data and 0.77 for test data.Model performance is improved as compare to earlier model.
+      * By using DecisionTreeRegressor with GridSearchCV, training R2_score is 0.99 and for test data R2_score is 0.89. Model performance is improved but slightly increase in overfitting.
+      * By using RandomForest with GridSearchCV, training R2_score is 0.93 and test R2_score is 0.99. Model is slightly underfitting.
+      * By using Gradient Boosting without hyperparameter tuning training R2_score 0.89 and test R2_score is 0.90, model is generalized very well.
+      * By using Gradient Boosting with GridSearchCV training R2_score is 0.99 and test R2_score is 0.95 model performance is improved with a accuracy of 0.95.
