@@ -1,4 +1,4 @@
-# Seoul-Bike-Sharing-Demand-Prediction
+# Bike-Sharing-Demand-Prediction
 
 ## Table of Content
 
@@ -10,15 +10,18 @@
 6.  Conclusion
 *****
 1. Introduction
+
   Bike sharing system is an innovative transportation strategy that provides individuals with bikes for their common use on a short-term basis for a price or for free.   Over the last few decades, there has been a significant increase in the popularity of bike-sharing systems all over the world. This is because it is an                 environmentally sustainable, convenient and economical way of improving urban mobility. In addition to this, this system also helps to promote healthier habits among   its users and reduce fuel consumption.
 The goals of this project are:
     * Understand the trends in the data and identify key factors affecting the hourly demand for rental bikes.
     * Build an appropriate regression model to forecast the number of rental bikes required per hour.
 
 2. Problem Statement
+
   With the growing demand and user base for bike-sharing system, providing the city with a stable supply of rental bikes could eventually become a challenging task. The success of bike-sharing system relies in ensuring that the quality of facilities provided, meets the needs and expectations of the users. Therefore, it is important to ensure that rental bikes are available and accessible to the users at right time ,as it reduces the waiting time. Forecasting the number of bikes required and identifying the key factors that influence the demand for rental bikes can greatly help in managing the bike-sharing system.
 
 3.  Dataset information
+
   Dataset used in this project is the Seoul Bike Share program data.This dataset contains information about the total count of rented bikes at each hour, as well as the date of observation and meteorological information (Humidity, Snowfall, Rainfall, Temperature Season, and so on) for that hour. The observations in the dataset  were recorded during a span of 365 days, from December 2017 to November 2018.
 
     The Seoul Bike Dataset contains the following information:
@@ -39,6 +42,7 @@ The goals of this project are:
       * Rented Bike count - Count of bikes rented at each hour (target variable)
       
 4. Tools and Technologies used
+
     * The programming language used in this project is Python . The following libraries were used for data analysis and data visualization and to build a classifier to predict the price range of mobile phones.
 
     * Pandas : For loading the dataset and performing data wrangling
@@ -48,6 +52,7 @@ The goals of this project are:
     * Sklearn: For the purpose of analysis,prediction and evaluation.
 
 4.  Steps involved
+
     * Data Preprocessing : Checked for outliers, incorrect values, missing values, duplicates and performed data type correction.
     * Feature Extraction : Created new columns such as Day, Month, Year, Days_of_week and Weekend from Date column .
     * Exploratory Data Analysis : Performed Univariate, Bivariate, and Multivariate analysis with various graphs and plots to better understand the distribution of features and their relationships.
@@ -59,6 +64,7 @@ The goals of this project are:
     * Comparison of models
    
 5. Algorithms used
+
     * Linear Regression
     * Ridge Regression
     * lasso regression
@@ -69,6 +75,7 @@ The goals of this project are:
     * Random forest regression model
 
 7. Conclusions:
+
     * Temperature and Hour have a strong correlation with the count of rented bikes.
     * Dew point temperature is highly positively correlated to the Temperature.
     * Over the weekend and during holidays, rental bike demand decreases.
