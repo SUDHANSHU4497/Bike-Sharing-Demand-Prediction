@@ -6,6 +6,14 @@
 2. Problem Statement
 3. Dataset Information
 4. Conclusion
+
+<p align="center">
+  <img 
+    width="750"
+    height="400"
+    src = "https://intellicar.in/images/bikelot.gif">
+</p>
+
 *****
 1. Introduction
 
