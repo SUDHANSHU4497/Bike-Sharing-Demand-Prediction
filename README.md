@@ -24,32 +24,20 @@ The goals of this project are:
     The Seoul Bike Dataset contains the following information:
 
       * Date - The date of each observation in the format 'year-month-day'
-
       * Hour - Hour of the day
-
       * Temperature - Temperature recorded in the city in Celsius (°C).
-
       * Humidity - Relative humidity in %
-
       * Wind speed - Speed of the wind in m/s
-
       * Visibility - measure of distance at which object or light can be clearly discerned in units of 10m
-
       * Dew point temperature - Temperature recorded in the beginning of the day in Celsius(°C).
-
       * Solar radiation - Intensity of sunlight in MJ/m^2
-
       * Rainfall - Amount of rainfall received in mm
-
       * Snowfall - Amount of snowfall received in cm
-
       * Seasons - Season of the year (Winter, Spring, Summer, Autumn)
-
       * Holiday - Whether the day is a Holiday or not (Holiday/No holiday)
-
       * Functional Day -Whether the rental service is available (Yes-Functional hours) or not (No-Non functional hours)
-
       * Rented Bike count - Count of bikes rented at each hour (target variable)
+      
 4. Tools and Technologies used
 
     * The programming language used in this project is Python . The following libraries were used for data analysis and data visualization and to build a classifier to predict the price range of mobile phones.
@@ -59,6 +47,8 @@ The goals of this project are:
     * Seaborn: For data visualization
     * Statsmodels: For statistical computations
     * Sklearn: For the purpose of analysis,prediction and evaluation.
+
+4. Approach
 4.  Steps involved
 
     * Data Preprocessing : Checked for outliers, incorrect values, missing values, duplicates and performed data type correction.
