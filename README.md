@@ -8,62 +8,40 @@
 4. Conclusion
 *****
 1. Introduction
-This data set contains booking information for a city hotel and a resort hotel, and includes information such as when the booking was made, length of stay, the number of adults, children, and/or babies, and the number of available parking spaces, among other things.
+
+  Bike sharing system is an innovative transportation strategy that provides individuals with bikes for their common use on a short-term basis for a price or for free. Over the last few decades, there has been a significant increase in the popularity of bike-sharing systems all over the world. This is because it is an environmentally sustainable, convenient and economical way of improving urban mobility. In addition to this, this system also helps to promote healthier habits among its users and reduce fuel consumption.
   
 2. Problem Statement
 
-Our main objective is to perform EDA on the given dataset and draw useful conclusions about general trends in hotel bookings and how factors governing hotel bookings interact with each other.
+  Bike sharing system is an innovative transportation strategy that provides individuals with bikes for their common use on a short-term basis for a price or for free. Over the last few decades, there has been a significant increase in the popularity of bike-sharing systems all over the world. This is because it is an environmentally sustainable, convenient and economical way of improving urban mobility. In addition to this, this system also helps to promote healthier habits among its users and reduce fuel consumption.
 
 3.  Dataset information
 
-We are given a hotel bookings dataset. This dataset contains booking information for a city hotel and a resort hotel. It contains the following features.
+  Dataset used in this project is the Seoul Bike Share program data.This dataset contains information about the total count of rented bikes at each hour, as well as the date of observation and meteorological information (Humidity, Snowfall, Rainfall, Temperature Season, and so on) for that hour. The observations in the dataset were recorded during a span of 365 days, from December 2017 to November 2018.
 
-    - hotel: Name of hotel ( City or Resort)
-    - is_canceled: Whether the booking is canceled or not (0 for no canceled and 1 for canceled)
-    - lead_time: time (in days) between booking transaction and actual arrival.
-    - arrival_date_year: Year of arrival
-    - arrival_date_month: month of arrival
-    - arrival_date_week_number: week number of arrival date.
-    - arrival_date_day_of_month: Day of month of arrival date
-    - stays_in_weekend_nights: No. of weekend nights spent in a hotel
-    - stays_in_week_nights: No. of weeknights spent in a hotel
-    - adults: No. of adults in single booking record.
-    - children: No. of children in single booking record.
-    - babies: No. of babies in single booking record. 
-    - meal: Type of meal chosen 
-    - country: Country of origin of customers (as mentioned by them)
-    - market_segment: What segment via booking was made and for what purpose.
-    - distribution_channel: Via which medium booking was made.
-    - is_repeated_guest: Whether the customer has made any booking before(0 for No and 1 for 
-                         Yes)
-    - previous_cancellations: No. of previous canceled bookings.
-    - previous_bookings_not_canceled: No. of previous non-canceled bookings.
-    - reserved_room_type: Room type reserved by a customer.
-    - assigned_room_type: Room type assigned to the customer.
-    - booking_changes: No. of booking changes done by customers
-    - deposit_type: Type of deposit at the time of making a booking (No deposit/ Refundable/ No refund)
-    - agent: Id of agent for booking
-    - company: Id of the company making a booking
-    - days_in_waiting_list: No. of days on waiting list.
-    - customer_type: Type of customer(Transient, Group, etc.)
-    - adr: Average Daily rate.
-    - required_car_parking_spaces: No. of car parking asked in booking
-    - total_of_special_requests: total no. of special request.
-    - reservation_status: Whether a customer has checked out or canceled,or not showed 
-    - reservation_status_date: Date of making reservation status.
-  dataset have 119390 records and 32 features.
+  The Seoul Bike Dataset contains the following information:
+
+    * Date - The date of each observation in the format 'year-month-day'
+    * Hour - Hour of the day
+    * Temperature - Temperature recorded in the city in Celsius (°C).
+    * Humidity - Relative humidity in %
+    * Wind speed - Speed of the wind in m/s
+    * Visibility - measure of distance at which object or light can be clearly discerned in units of 10m
+    * Dew point temperature - Temperature recorded in the beginning of the day in Celsius(°C).
+    * Solar radiation - Intensity of sunlight in MJ/m^2
+    * Rainfall - Amount of rainfall received in mm
+    * Snowfall - Amount of snowfall received in cm
+    * Seasons - Season of the year (Winter, Spring, Summer, Autumn)
+    * Holiday - Whether the day is a Holiday or not (Holiday/No holiday)
+    * Functional Day -Whether the rental service is available (Yes-Functional hours) or not (No-Non functional hours)
 
 4. Conclusions:
 
-      * In the both hotel, most of the customers are no deposite type.
-      * Frequent guest visit both hotel in same proportion, maximum number of new guest visit city hotel.
-      * Most of the visitor who book their room are from aviation industry
-      * travel agent or tour operator are most popular distribution channel.
-      * Maximum number of visitor from Portugal followed by Great Britain and France.
-      * For Portugal and great Britain resort hotel is more popular, from France onwards city hotel is more popular.
-      * Very small amount Aviation people cancel their ticket compare to online TA
-      * BB is the most popular food for both the hotel.
-      * People with night stay 4 or more preferred to book room in resort hotel and less than 4 preferred to book in city hotel.
-      * booking change is increases from January to July and reaches to its maximum value and then decreases to December. 
-      * every four-month waiting time increases to its maximum value
+    * Elastic net model understands data properly and hence shows very poor performance with data.
+    * linear regression and lasso and ridge with or without hyperparameter tuning show very poor performance with the data (all having almost the same R2_score)
+    * By using polynomial regression with degree 2, R2_score improve to 0.8 for train data and 0.77 for test data. Model performance is improved as compared to the earlier model.
+    * By using DecisionTreeRegressor with GridSearchCV, training R2_score is 0.99 and for the test, data R2_score is 0.89. Model performance is improved but slightly increase in overfitting.
+    * By using RandomForest with GridSearchCV, training R2_score is 0.93 and test R2_score is 0.99. The model is slightly underfitting.
+    * By using Gradient Boosting without hyperparameter tuning training R2_score 0.89 and test R2_score 0.90, the model is generalized very well.
+    * By using Gradient Boosting with GridSearchCV training R2_score is 0.99 and test R2_score is 0.95 model performance is improved with an accuracy of 0.95. The difference between the R2_score test and train data is so small that it can be neglected and we can deploy this model.
 
